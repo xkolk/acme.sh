@@ -112,4 +112,4 @@ EXPOSE 80
 
 STOPSIGNAL SIGQUIT
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["sh", "-c", "crond && nginx -g 'daemon off;'"]
