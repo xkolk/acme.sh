@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Serhii Kolisnyk <kolkmail@gmail.com>
 
 ENV NGINX_VERSION 1.24.0
-ENV PKG_RELEASE   7
+ENV PKG_RELEASE   14
 
 RUN set -x \
 # create nginx user/group first, to be consistent throughout docker variants
