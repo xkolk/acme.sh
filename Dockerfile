@@ -98,8 +98,8 @@ RUN set -x \
     && apk add --no-cache tzdata \
 # forward request and error logs to docker log collector
     && ln -sf /dev/stdout /var/log/nginx/access.log \
-    && ln -sf /dev/stderr /var/log/nginx/error.log \
-    && wget -O- https://get.acme.sh | sh
+    && ln -sf /dev/stderr /var/log/nginx/error.log
+RUN wget -q -O- https://get.acme.sh | sh
 # create a docker-entrypoint.d directory
 #    && mkdir /docker-entrypoint.d
 
