@@ -81,6 +81,7 @@ RUN set -x \
 # then move `envsubst` out of the way so `gettext` can
 # be deleted completely, then move `envsubst` back.
     && apk add --no-cache --virtual .gettext gettext \
+    && apk add --no-cache openssl \
     && mv /usr/bin/envsubst /tmp/ \
     \
     && runDeps="$( \
